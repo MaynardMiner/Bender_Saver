@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bender_Saver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ed7bbd2fa1fa86f5adc53eff973963c1faddd8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bender_Saver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bender_Saver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

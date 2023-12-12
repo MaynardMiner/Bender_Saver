@@ -11,6 +11,7 @@ namespace Bender_Saver
         private const int BOUNCE_LIMIT = 10;
         private int _xVelocity = BOUNCE_SPEED;
         private int _yVelocity = BOUNCE_SPEED;
+        private string video = @"C:\bender.mp4";
 
         [DllImport("user32.dll")]
         static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
@@ -56,7 +57,7 @@ namespace Bender_Saver
 
         private void ScreensaverForm_Load(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = @"C:\bender.mp4";
+            axWindowsMediaPlayer1.URL = video;
             axWindowsMediaPlayer1.stretchToFit = true;
             Cursor.Hide();
             TopMost = true;
