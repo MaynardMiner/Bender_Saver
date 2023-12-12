@@ -59,6 +59,8 @@ namespace Bender_Saver
         {
             axWindowsMediaPlayer1.URL = video;
             axWindowsMediaPlayer1.stretchToFit = true;
+            axWindowsMediaPlayer1.settings.autoStart = true;
+            axWindowsMediaPlayer1.settings.setMode("loop", true);
             Cursor.Hide();
             TopMost = true;
             moveTimer.Interval = 30;
