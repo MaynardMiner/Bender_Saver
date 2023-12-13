@@ -20,3 +20,12 @@ How to use:
 6.) If done right, window should close. It is now configured. You can right click Bender_Saver.scr and select "Test" to confirm.
 
 7.) After configured and tested, install the screen saver by right clicking Bender_Saver.scr and select "Install".
+
+
+To Build:
+
+1.) Download source, open with Visual Studio Code 2022. Requires .NET 8.0 SDK.
+
+2.) Select Release version then build.
+
+3.) Open bin folder and rename Bender_Saver.exe to Bender_Saver.scr
