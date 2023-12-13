@@ -1,11 +1,12 @@
 # Bender Saver
 Screen Saver using my BENDERS by BANDIT
+Check out NFT project on Opensea: https://opensea.io/collection/bendersbybandit 
 
 
 All BENDERS can be used by following the "How to use" instructions.
 
 
-How to use:
+## How to use:
 
 1.) Download and extract contents.
 
@@ -22,7 +23,7 @@ How to use:
 7.) After configured and tested, install the screen saver by right clicking Bender_Saver.scr and select "Install".
 
 
-To Build:
+## To Build:
 
 1.) Download source, open with Visual Studio Code 2022. Requires .NET 8.0 SDK.
 
