@@ -1,4 +1,6 @@
+using Microsoft.Win32;
 using System.Runtime.InteropServices;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Bender_Saver
@@ -11,7 +13,7 @@ namespace Bender_Saver
         private const int BOUNCE_LIMIT = 10;
         private int _xVelocity = BOUNCE_SPEED;
         private int _yVelocity = BOUNCE_SPEED;
-        private string video = @"C:\bender.mp4";
+        private string video;
 
         [DllImport("user32.dll")]
         static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
@@ -57,6 +59,21 @@ namespace Bender_Saver
 
         private void ScreensaverForm_Load(object sender, EventArgs e)
         {
+            // Use the string from the Registry if it exists
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Bender_Saver");
+            if (key == null)
+            {
+                video = "https://art-assets.artlab.xyz/82/47/73/1d8467257c18d9c25f773390a533d8f40e1371e0939dfae915f5d87a5e";
+                BackColor = Color.Black;
+            }
+            else
+            {
+                video = (string)key.GetValue("url");
+                ColorConverter convert = new ColorConverter();
+                string cv = key.GetValue("color").ToString();
+                BackColor = (Color)convert.ConvertFromString(cv);
+            }
+
             axWindowsMediaPlayer1.URL = video;
             axWindowsMediaPlayer1.stretchToFit = true;
             axWindowsMediaPlayer1.settings.autoStart = true;

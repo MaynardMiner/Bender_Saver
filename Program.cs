@@ -28,7 +28,7 @@ namespace Bender_Saver
 
                 if (firstArgument == "/c")           // Configuration mode
                 {
-                    // TODO
+                    Application.Run(new SettingsForm());
                 }
                 else if (firstArgument == "/p")      // Preview mode
                 {
@@ -56,7 +56,7 @@ namespace Bender_Saver
             }
             else    // No arguments - treat like /c
             {
-                // TODO
+                Application.Run(new SettingsForm());
             }
         }
 
