@@ -49,7 +49,14 @@ namespace Bender_Saver
         private async void Button1_Click(object sender, EventArgs e)
         {
             bool good = false;
-            if (Uri.IsWellFormedUriString(url_box.Text, UriKind.Absolute))
+            if(File.Exists(url_box.Text))
+            {
+                RegistryKey key = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Bender_Saver");
+                key.SetValue("url", url_box.Text);
+                key.SetValue("color", HexConverter(pnlSelectedScreen.BackColor));
+                good = true;
+            }
+            else if (Uri.IsWellFormedUriString(url_box.Text, UriKind.Absolute))
             {
                 try
                 {
